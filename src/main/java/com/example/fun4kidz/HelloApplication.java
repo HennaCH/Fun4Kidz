@@ -11,7 +11,7 @@ import java.io.IOException;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        Label label = new Label("Wazupp!!!!");
+        Label label = new Label("Wazuppp");
         Scene scene = new Scene(label);
         stage.setTitle("Hello!");
         stage.setScene(scene);
