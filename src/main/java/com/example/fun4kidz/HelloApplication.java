@@ -52,9 +52,14 @@ public class HelloApplication extends Application {
         rect.setHeight(200);
         rect.setLayoutX(290);
         rect.setLayoutY(150);
+        button1.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                grp.getChildren().add(rect);
+            }
+        });
 
-
-        grp.getChildren().addAll(button1, button2, button3,rect);
+        grp.getChildren().addAll(button1, button2, button3);
         primaryStage.setScene(scene);
         primaryStage.show();
 
