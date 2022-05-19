@@ -14,11 +14,14 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.shape.Shape;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class HelloApplication extends Application {
+
+    private AddShape SHAPE;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -30,12 +33,19 @@ public class HelloApplication extends Application {
         primaryStage.centerOnScreen();
 
         Group grp = new Group();
+        SHAPE = new AddShape();
         HBox hbox = new HBox();
         Scene scene = new Scene(grp);
 
         Button button1 = new Button("Car");
         button1.setLayoutX(10);
         button1.setLayoutY(120);
+        button1.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+               grp.getChildren().addAll(SHAPE.rectCar(),SHAPE.circ1Car(),SHAPE.circ2Car());
+            }
+        });
 
 
         Button button2 = new Button("Flower");
@@ -46,23 +56,9 @@ public class HelloApplication extends Application {
         button3.setLayoutX(10);
         button3.setLayoutY(200);
 
-        Rectangle rect = new Rectangle();
-        rect.setFill(Color.PINK);
-        rect.setWidth(300);
-        rect.setHeight(200);
-        rect.setLayoutX(290);
-        rect.setLayoutY(150);
-        button1.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                grp.getChildren().add(rect);
-            }
-        });
-
         grp.getChildren().addAll(button1, button2, button3);
         primaryStage.setScene(scene);
         primaryStage.show();
-
     }
 
         public static void main(String[] args) {
