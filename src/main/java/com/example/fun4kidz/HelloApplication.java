@@ -18,6 +18,7 @@ import javafx.scene.shape.Shape;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayDeque;
 
 public class HelloApplication extends Application {
 
@@ -43,7 +44,7 @@ public class HelloApplication extends Application {
         button1.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-               grp.getChildren().addAll(SHAPE.rectCar(),SHAPE.circ1Car(),SHAPE.circ2Car());
+               grp.getChildren().addAll(SHAPE.rectCar(),SHAPE.circ1Car(),SHAPE.circ2Car(), SHAPE.rect2Car(), SHAPE.rect3Car());
             }
         });
 
@@ -51,6 +52,12 @@ public class HelloApplication extends Application {
         Button button2 = new Button("Flower");
         button2.setLayoutX(10);
         button2.setLayoutY(160);
+        button2.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                grp.getChildren().addAll(SHAPE.FlowerCenter(), SHAPE.petal1());
+            }
+        });
 
         Button button3 = new Button("Butterfly");
         button3.setLayoutX(10);
