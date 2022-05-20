@@ -34,8 +34,9 @@ public class HelloApplication extends Application {
         primaryStage.centerOnScreen();
 
         Group grp = new Group();
+        HBox Shapes = new HBox();
         SHAPE = new AddShape();
-        HBox hbox = new HBox();
+        Group clearGrp = new Group();
         Scene scene = new Scene(grp);
 
         Button button1 = new Button("Car");
@@ -44,7 +45,9 @@ public class HelloApplication extends Application {
         button1.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-               grp.getChildren().addAll(SHAPE.rectCar(),SHAPE.circ1Car(),SHAPE.circ2Car(), SHAPE.rect2Car(), SHAPE.rect3Car());
+                clearGrp.getChildren().clear();
+                clearGrp.getChildren().addAll(SHAPE.rectCar(),SHAPE.circ1Car(),SHAPE.circ2Car(),
+                                        SHAPE.rect2Car(), SHAPE.rect3Car());
             }
         });
 
@@ -55,7 +58,10 @@ public class HelloApplication extends Application {
         button2.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                grp.getChildren().addAll(SHAPE.FlowerCenter(), SHAPE.petal1());
+                clearGrp.getChildren().clear();
+                clearGrp.getChildren().addAll( SHAPE.petal1(), SHAPE.petalDiag1(), SHAPE.petal2(), SHAPE.petalDiag2(),
+                                          SHAPE.petal3(),SHAPE.petalDiag3(), SHAPE.petal4(), SHAPE.petalDiag4(),
+                                          SHAPE.FlowerCenter(), SHAPE.petalCenter1(), SHAPE.petalCenter2(), SHAPE.petalCenter3());
             }
         });
 
@@ -63,7 +69,7 @@ public class HelloApplication extends Application {
         button3.setLayoutX(10);
         button3.setLayoutY(200);
 
-        grp.getChildren().addAll(button1, button2, button3);
+        grp.getChildren().addAll(button1, button2, button3, clearGrp);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
