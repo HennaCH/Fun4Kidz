@@ -1,5 +1,6 @@
 package com.example.fun4kidz;
 
+import javafx.geometry.Pos;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Ellipse;
@@ -187,5 +188,39 @@ public class AddShape {
         smallCenter3.setLayoutX(450);
         smallCenter3.setLayoutY(230);
         return smallCenter3;
+    }
+    public Ellipse bodyButterfly(){
+        Ellipse body = new Ellipse();
+        body.setFill(Color.BEIGE);
+        body.setCenterX(450.0f);
+        body.setCenterY(260.0f);
+        body.setRadiusX(10.0f);
+        body.setRadiusY(130.0f);
+        return body;
+    }
+    public Ellipse LeftWing1(){
+        Ellipse wing1 = new Ellipse();
+        wing1.setFill(Color.LIGHTBLUE);
+        wing1.setCenterX(390.0f);
+        wing1.setCenterY(-35.0f);
+        wing1.setRadiusX(100.0f);
+        wing1.setRadiusY(25.0f);
+        Rotate rt = new Rotate();
+        rt.setAngle(30);
+        wing1.getTransforms().add(rt);
+        return wing1;
+    }
+
+    public Ellipse LeftWing2(){
+        Ellipse wing2 = new Ellipse();
+        wing2.setFill(Color.DARKORANGE);
+        wing2.setCenterX(180.0f);
+        wing2.setCenterY(400.0f);
+        wing2.setRadiusX(100.0f);
+        wing2.setRadiusY(40.0f);
+        Rotate rt = new Rotate();
+        rt.setAngle(-30);
+        wing2.getTransforms().add(rt);
+        return wing2;
     }
 }

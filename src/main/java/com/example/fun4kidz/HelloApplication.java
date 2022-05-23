@@ -68,14 +68,21 @@ public class HelloApplication extends Application {
         Button button3 = new Button("Butterfly");
         button3.setLayoutX(10);
         button3.setLayoutY(200);
+        button3.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                clearGrp.getChildren().clear();
+                clearGrp.getChildren().addAll(SHAPE.bodyButterfly(), SHAPE.LeftWing1(),SHAPE.LeftWing2());
+            }
+        });
 
-        grp.getChildren().addAll(button1, button2, button3, clearGrp);
-        primaryStage.setScene(scene);
-        primaryStage.show();
-    }
+                grp.getChildren().addAll(button1, button2, button3, clearGrp);
+                primaryStage.setScene(scene);
+                primaryStage.show();
+            }
 
-        public static void main(String[] args) {
-        launch();
-    }
+            public static void main(String[] args) {
+                launch();
+            }
 
-}
+        }
