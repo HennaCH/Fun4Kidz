@@ -87,7 +87,7 @@ public class HelloApplication extends Application {
                                         SHAPE.rect2Car(), SHAPE.rect3Car());
 
                 hbox2.getChildren().clear();
-                lb.setText("Click on certain parts to change color. Click on the car button to reset the colors.");
+                lb.setText("Click on certain parts to the change color. Click on the car button to reset the colors.");
                 hbox2.getChildren().add(lb);
 
 
@@ -107,7 +107,7 @@ public class HelloApplication extends Application {
                                           SHAPE.FlowerCenter(), SHAPE.petalCenter1(), SHAPE.petalCenter2(), SHAPE.petalCenter3());
 
                 hbox2.getChildren().clear();
-                lb.setText("Click on certain parts to change color. Click on the flower button to reset the colors.");
+                lb.setText("Click on certain parts to change the color. Click on the flower button to reset the colors.");
                 hbox2.getChildren().add(lb);
 
             }
@@ -124,7 +124,7 @@ public class HelloApplication extends Application {
                         SHAPE.RightWing1(),SHAPE.RightWing2());
 
                 hbox2.getChildren().clear();
-                lb.setText("Click on certain parts to change color. Click on the butterfly button to reset the colors.");
+                lb.setText("Click on certain parts to change the color. Click on the butterfly button to reset the colors.");
                 hbox2.getChildren().add(lb);
             }
         });
