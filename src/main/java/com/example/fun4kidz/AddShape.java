@@ -28,6 +28,12 @@ public class AddShape {
         rect.setHeight(200);
         rect.setLayoutX(290);
         rect.setLayoutY(150);
+        rect.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                rect.setFill(Color.DEEPPINK);
+            }
+        });
         return rect ;
     }
     public Shape circ1Car(){
@@ -53,6 +59,12 @@ public class AddShape {
         rect2.setHeight(120);
         rect2.setLayoutX(590);
         rect2.setLayoutY(230);
+        rect2.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                rect2.setFill(Color.DEEPPINK);
+            }
+        });
         return rect2;
     }
     public Rectangle rect3Car(){
@@ -72,16 +84,12 @@ public class AddShape {
         ellipse.setCenterY(230.0f);
         ellipse.setRadiusX(100.0f);
         ellipse.setRadiusY(25.0f);
-       /* for(int i=0; i <= 4; i++){
-            Ellipse ellipsee = new Ellipse();
-            ellipsee.setFill(Color.PALEGOLDENROD);
-            ellipse.getCenterX();
-            ellipsee.setCenterX();
-            ellipsee.setCenterY(ellipse.getCenterY()-90);
-            ellipsee.setRadiusX(100.0f);
-            ellipsee.setRadiusY(25.0f);
-            return ellipsee;
-        }*/
+        ellipse.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                ellipse.setFill(Color.MEDIUMPURPLE);
+            }
+        });
         return ellipse;
     }
     public Ellipse petalDiag1(){
@@ -94,6 +102,12 @@ public class AddShape {
         Rotate rt = new Rotate();
         rt.setAngle(30);
         ellipseD1.getTransforms().add(rt);
+      ellipseD1.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                ellipseD1.setFill(Color.MEDIUMPURPLE);
+            }
+        });
         return ellipseD1;
     }
 
@@ -104,6 +118,12 @@ public class AddShape {
         ellipse2.setCenterY(140.0f);
         ellipse2.setRadiusX(25.0f);
         ellipse2.setRadiusY(100.0f);
+        ellipse2.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                ellipse2.setFill(Color.MEDIUMPURPLE);
+            }
+        });
         return ellipse2;
     }
     public Ellipse petalDiag2(){
@@ -116,6 +136,12 @@ public class AddShape {
         Rotate rt = new Rotate();
         rt.setAngle(-30);
         ellipseD2.getTransforms().add(rt);
+        ellipseD2.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                ellipseD2.setFill(Color.MEDIUMPURPLE);
+            }
+        });
         return ellipseD2;
     }
 
@@ -126,6 +152,12 @@ public class AddShape {
         ellipse3.setCenterY(230.0f);
         ellipse3.setRadiusX(100.0f);
         ellipse3.setRadiusY(25.0f);
+        ellipse3.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                ellipse3.setFill(Color.MEDIUMPURPLE);
+            }
+        });
         return ellipse3;
     }
     public Ellipse petalDiag3(){
@@ -138,6 +170,12 @@ public class AddShape {
         Rotate rt = new Rotate();
         rt.setAngle(-30);
         ellipseD3.getTransforms().add(rt);
+        ellipseD3.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                ellipseD3.setFill(Color.MEDIUMPURPLE);
+            }
+        });
         return ellipseD3;
     }
     public Ellipse petal4(){
@@ -147,6 +185,12 @@ public class AddShape {
         ellipse4.setCenterY(320.0f);
         ellipse4.setRadiusX(25.0f);
         ellipse4.setRadiusY(100.0f);
+        ellipse4.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                ellipse4.setFill(Color.MEDIUMPURPLE);
+            }
+        });
         return ellipse4;
     }
     public Ellipse petalDiag4(){
@@ -159,6 +203,12 @@ public class AddShape {
         Rotate rt = new Rotate();
         rt.setAngle(30);
         ellipseD4.getTransforms().add(rt);
+        ellipseD4.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                ellipseD4.setFill(Color.MEDIUMPURPLE);
+            }
+        });
         return ellipseD4;
     }
 
@@ -172,7 +222,7 @@ public class AddShape {
     }
 
     public Ellipse petalCenter1(){
-        Ellipse smallCenter1 = new Ellipse();
+       Ellipse smallCenter1 = new Ellipse();
         smallCenter1.setFill(Color.NAVAJOWHITE);
         smallCenter1.setCenterX(450.0f);
         smallCenter1.setCenterY(230.0f);
@@ -181,13 +231,13 @@ public class AddShape {
         return smallCenter1;
     }
     public Ellipse petalCenter2(){
-        Ellipse smallCenter1 = new Ellipse();
-        smallCenter1.setFill(Color.NAVAJOWHITE);
-        smallCenter1.setCenterX(450.0f);
-        smallCenter1.setCenterY(230.0f);
-        smallCenter1.setRadiusX(20.0f);
-        smallCenter1.setRadiusY(30.0f);
-        return smallCenter1;
+        Ellipse smallCenter2 = new Ellipse();
+        smallCenter2.setFill(Color.NAVAJOWHITE);
+        smallCenter2.setCenterX(450.0f);
+        smallCenter2.setCenterY(230.0f);
+        smallCenter2.setRadiusX(20.0f);
+        smallCenter2.setRadiusY(30.0f);
+        return smallCenter2;
     }
     public Circle petalCenter3(){
         Circle smallCenter3 = new Circle();
@@ -229,6 +279,12 @@ public class AddShape {
         Rotate rt = new Rotate();
         rt.setAngle(-30);
         wing2.getTransforms().add(rt);
+        wing2.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                wing2.setFill(Color.MEDIUMVIOLETRED);
+            }
+        });
         return wing2;
     }
     public Ellipse RightWing1(){
@@ -254,7 +310,12 @@ public class AddShape {
         Rotate rt = new Rotate();
         rt.setAngle(30);
         wing2.getTransforms().add(rt);
-        wing2.setOnMouseEntered();
+        wing2.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                wing2.setFill(Color.MEDIUMVIOLETRED);
+            }
+        });
         return wing2;
     }
 }

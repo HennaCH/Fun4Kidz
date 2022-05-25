@@ -2,12 +2,7 @@ package com.example.fun4kidz;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.event.EventHandler;
-import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -16,12 +11,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
-import javafx.scene.shape.Shape;
 import javafx.stage.Stage;
 
-import java.io.IOException;
-import java.util.ArrayDeque;
 
 public class HelloApplication extends Application {
 
@@ -39,36 +30,43 @@ public class HelloApplication extends Application {
 
 
         Group grp = new Group();
-        HBox Shapes = new HBox();
         SHAPE = new AddShape();
         Group clearGrp = new Group();
+
+        HBox hBox = new HBox();
+        hBox.setLayoutX(180);
+        hBox.setLayoutY(44);
+
+        HBox hbox2 = new HBox();
+        hbox2.setLayoutX(240);
+        hbox2.setLayoutY(430);
+
         Scene scene = new Scene(grp);
 
         Label askname = new Label("What is your name ?");
         askname.setLayoutX(10);
         askname.setLayoutY(20);
 
+        Label lb = new Label();
+
         TextField getname =new TextField();
         getname.setLayoutX(10);
         getname.setLayoutY(40);
 
         Label answer = new Label();
-        answer.setLayoutX(180);
-        answer.setLayoutY(44);
 
         Button submit = new Button("Submit");
-
             submit.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent actionEvent) {
                     if(getname.getText().equals("")){
-                    clearGrp.getChildren().clear();
+                    hBox.getChildren().clear();
                     answer.setText("Hi !");
-                    clearGrp.getChildren().add(answer);}
+                    hBox.getChildren().add(answer);}
                     else {
-                        clearGrp.getChildren().clear();
+                        hBox.getChildren().clear();
                         answer.setText("Hi " + getname.getText() + " !");
-                        clearGrp.getChildren().add(answer);}
+                        hBox.getChildren().add(answer);}
                     }
 
                 });
@@ -87,6 +85,12 @@ public class HelloApplication extends Application {
                 clearGrp.getChildren().clear();
                 clearGrp.getChildren().addAll(SHAPE.rectCar(),SHAPE.circ1Car(),SHAPE.circ2Car(),
                                         SHAPE.rect2Car(), SHAPE.rect3Car());
+
+                hbox2.getChildren().clear();
+                lb.setText("Click on certain parts to change color. Click on the car button to reset the colors.");
+                hbox2.getChildren().add(lb);
+
+
             }
         });
 
@@ -102,6 +106,10 @@ public class HelloApplication extends Application {
                                           SHAPE.petal3(),SHAPE.petalDiag3(), SHAPE.petal4(), SHAPE.petalDiag4(),
                                           SHAPE.FlowerCenter(), SHAPE.petalCenter1(), SHAPE.petalCenter2(), SHAPE.petalCenter3());
 
+                hbox2.getChildren().clear();
+                lb.setText("Click on certain parts to change color. Click on the flower button to reset the colors.");
+                hbox2.getChildren().add(lb);
+
             }
         });
 
@@ -114,6 +122,10 @@ public class HelloApplication extends Application {
                 clearGrp.getChildren().clear();
                 clearGrp.getChildren().addAll(SHAPE.bodyButterfly(), SHAPE.LeftWing1(),SHAPE.LeftWing2(),
                         SHAPE.RightWing1(),SHAPE.RightWing2());
+
+                hbox2.getChildren().clear();
+                lb.setText("Click on certain parts to change color. Click on the butterfly button to reset the colors.");
+                hbox2.getChildren().add(lb);
             }
         });
 
@@ -128,8 +140,8 @@ public class HelloApplication extends Application {
             }
         });
 
-        grp.getChildren().addAll(button1, button2, button3, clearGrp,backgroundColor,
-                                 askname, getname,submit);
+        grp.getChildren().addAll(button1, button2, button3, clearGrp,backgroundColor,hBox,
+                                 askname, getname,submit,hbox2);
                 primaryStage.setScene(scene);
                 primaryStage.show();
             }
