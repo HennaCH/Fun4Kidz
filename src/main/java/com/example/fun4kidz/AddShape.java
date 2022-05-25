@@ -1,17 +1,25 @@
 package com.example.fun4kidz;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.fxml.FXML;
 import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.ColorPicker;
+import javafx.scene.input.DragEvent;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
-import javafx.scene.shape.Ellipse;
-import javafx.scene.shape.Rectangle;
-import javafx.scene.shape.Shape;
+import javafx.scene.shape.*;
 import javafx.scene.transform.Rotate;
 
 import java.util.ArrayDeque;
 
 public class AddShape {
-    private ArrayDeque<Shape> shapes = new ArrayDeque<Shape>();
 
     public Shape rectCar() {
         Rectangle rect = new Rectangle();
@@ -195,7 +203,7 @@ public class AddShape {
         body.setCenterX(450.0f);
         body.setCenterY(260.0f);
         body.setRadiusX(10.0f);
-        body.setRadiusY(130.0f);
+        body.setRadiusY(110.0f);
         return body;
     }
     public Ellipse LeftWing1(){
@@ -223,4 +231,31 @@ public class AddShape {
         wing2.getTransforms().add(rt);
         return wing2;
     }
+    public Ellipse RightWing1(){
+        Ellipse wing1 = new Ellipse();
+        wing1.setFill(Color.LIGHTBLUE);
+        wing1.setCenterX(385.0f);
+        wing1.setCenterY(425.0f);
+        wing1.setRadiusX(100.0f);
+        wing1.setRadiusY(25.0f);
+        Rotate rt = new Rotate();
+        rt.setAngle(-30);
+        wing1.getTransforms().add(rt);
+        return wing1;
+    }
+
+    public Ellipse RightWing2(){
+        Ellipse wing2 = new Ellipse();
+        wing2.setFill(Color.DARKORANGE);
+        wing2.setCenterX(603.0f);
+        wing2.setCenterY(-50.0f);
+        wing2.setRadiusX(100.0f);
+        wing2.setRadiusY(40.0f);
+        Rotate rt = new Rotate();
+        rt.setAngle(30);
+        wing2.getTransforms().add(rt);
+        wing2.setOnMouseEntered();
+        return wing2;
+    }
 }
+

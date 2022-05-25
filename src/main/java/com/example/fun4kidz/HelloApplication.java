@@ -4,14 +4,17 @@ import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ColorPicker;
 import javafx.scene.control.Label;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.Shape;
@@ -33,11 +36,47 @@ public class HelloApplication extends Application {
         primaryStage.setResizable(false);
         primaryStage.centerOnScreen();
 
+
+
         Group grp = new Group();
         HBox Shapes = new HBox();
         SHAPE = new AddShape();
         Group clearGrp = new Group();
         Scene scene = new Scene(grp);
+
+        Label askname = new Label("What is your name ?");
+        askname.setLayoutX(10);
+        askname.setLayoutY(20);
+
+        TextField getname =new TextField();
+        getname.setLayoutX(10);
+        getname.setLayoutY(40);
+
+        Label answer = new Label();
+        answer.setLayoutX(180);
+        answer.setLayoutY(44);
+
+        Button submit = new Button("Submit");
+
+            submit.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent actionEvent) {
+                    if(getname.getText().equals("")){
+                    clearGrp.getChildren().clear();
+                    answer.setText("Hi !");
+                    clearGrp.getChildren().add(answer);}
+                    else {
+                        clearGrp.getChildren().clear();
+                        answer.setText("Hi " + getname.getText() + " !");
+                        clearGrp.getChildren().add(answer);}
+                    }
+
+                });
+
+
+        submit.setLayoutX(10);
+        submit.setLayoutY(80);
+
 
         Button button1 = new Button("Car");
         button1.setLayoutX(10);
@@ -62,6 +101,7 @@ public class HelloApplication extends Application {
                 clearGrp.getChildren().addAll( SHAPE.petal1(), SHAPE.petalDiag1(), SHAPE.petal2(), SHAPE.petalDiag2(),
                                           SHAPE.petal3(),SHAPE.petalDiag3(), SHAPE.petal4(), SHAPE.petalDiag4(),
                                           SHAPE.FlowerCenter(), SHAPE.petalCenter1(), SHAPE.petalCenter2(), SHAPE.petalCenter3());
+
             }
         });
 
@@ -72,11 +112,24 @@ public class HelloApplication extends Application {
             @Override
             public void handle(ActionEvent actionEvent) {
                 clearGrp.getChildren().clear();
-                clearGrp.getChildren().addAll(SHAPE.bodyButterfly(), SHAPE.LeftWing1(),SHAPE.LeftWing2());
+                clearGrp.getChildren().addAll(SHAPE.bodyButterfly(), SHAPE.LeftWing1(),SHAPE.LeftWing2(),
+                        SHAPE.RightWing1(),SHAPE.RightWing2());
             }
         });
 
-                grp.getChildren().addAll(button1, button2, button3, clearGrp);
+        ColorPicker backgroundColor = new ColorPicker();
+        backgroundColor.setLayoutX(10);
+        backgroundColor.setLayoutY(240);
+        backgroundColor.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                Color Color =backgroundColor.getValue();
+                scene.setFill(Color);
+            }
+        });
+
+        grp.getChildren().addAll(button1, button2, button3, clearGrp,backgroundColor,
+                                 askname, getname,submit);
                 primaryStage.setScene(scene);
                 primaryStage.show();
             }
