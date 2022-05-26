@@ -21,7 +21,7 @@ import java.util.ArrayDeque;
 
 public class AddShape {
 
-    public Shape rectCar() {
+    public Rectangle rectCar() {
         Rectangle rect = new Rectangle();
         rect.setFill(Color.PINK);
         rect.setWidth(300);
@@ -36,7 +36,7 @@ public class AddShape {
         });
         return rect ;
     }
-    public Shape circ1Car(){
+    public Circle circ1Car(){
         Circle circ1 = new Circle();
         circ1.setFill(Color.LIGHTBLUE);
         circ1.setRadius(40);
