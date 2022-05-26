@@ -27,12 +27,18 @@ This is my UML diagram.
 
 ![Fun4KidzUML](https://user-images.githubusercontent.com/104155362/170406774-ff544973-5e51-4fdd-a9de-ce8f94c7ad45.svg)
 
-If the first link does not work try this one.
+These are screenshots of my application.
+![Screenshot (22)](https://user-images.githubusercontent.com/104155362/170408650-464e184b-adf5-4309-8224-401410ac6d05.png)
+![Screenshot (23)](https://user-images.githubusercontent.com/104155362/170408682-a9424e1e-dde8-49cd-aa97-52df0ee4a63a.png)
+![Screenshot (24)](https://user-images.githubusercontent.com/104155362/170408724-19a0023d-5461-4b6f-bfb2-d1d4a5fc6b7d.png)
+![Screenshot (25)](https://user-images.githubusercontent.com/104155362/170408754-c6851ac9-8cbb-4236-b0c9-527fa3730f7c.png)
+![Screenshot (27)](https://user-images.githubusercontent.com/104155362/170408781-534b7261-8749-42bd-850f-16f9402f7ac2.png)
+![Screenshot (29)](https://user-images.githubusercontent.com/104155362/170408805-5e1b1f1f-a29b-41b5-984f-9358b2e51070.png)
+![Screenshot (32)](https://user-images.githubusercontent.com/104155362/170408826-424736ff-e896-44c9-99ba-abc9353d57a0.png)
+![Screenshot (28)](https://user-images.githubusercontent.com/104155362/170408836-4f956c60-1893-4a3e-9c79-7f41947787ae.png)
+![Screenshot (30)](https://user-images.githubusercontent.com/104155362/170408863-18677c5b-4f9e-46f9-87fb-a4da690d1701.png)
+![Screenshot (31)](https://user-images.githubusercontent.com/104155362/170408879-ad101ae4-c600-4ac3-9724-1c82c863bbcc.png)
 
-![Fun4KidzUML](https://user-images.githubusercontent.com/104155362/170407105-3eab5c5f-ae20-4349-af91-459dc647be05.png)\
-
-If the link still does not work, I have added a file for the UML diagram in the homework submission.
-I will also attach screenshots of my application.
 
 
 
